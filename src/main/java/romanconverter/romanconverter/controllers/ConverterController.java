@@ -13,6 +13,11 @@ import java.util.Map;
 @RequestMapping
 public class ConverterController {
 
+    @GetMapping(value = "")
+    public String returnMessageEndpoint() {
+        return "Para realziar a conversão utilize o endpoint /roman-to-int/{romanNumber}";
+    }
+
     @GetMapping(value = "/roman-to-int/{romanNumber}")
     public Integer converteRomanToInteger(@PathVariable  String romanNumber) {
 
